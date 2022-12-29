@@ -10,5 +10,9 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[features]
+default = ["xmlrpc/http", "xmlrpc/tls"]
+httponly = ["xmlrpc/http"]
+
 [dependencies]
-xmlrpc = "0.15.0"
+xmlrpc = { version = "0.15.0", default-features = false }
